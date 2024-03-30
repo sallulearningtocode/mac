@@ -1,0 +1,80 @@
+{% extends 'shop/basic.html' %}
+<style>
+        {% block css %}
+
+
+    body {
+        
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
+
+    header,
+    footer {
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+
+    main {
+        padding: 30px;
+    }
+
+    #team{
+        margin-top: 20%;
+    }
+    h1,
+    h2 {
+        color:#0a0c0c;
+        margin: auto;
+        width:50%; 
+    }
+
+    .about {
+        color:#464e56;
+        margin: auto;
+        width:50%;
+    }
+    .about p{
+        margin-top: 10px;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold';
+    }
+
+    /* Add more styles as needed */
+            {% endblock %}
+</style>
+
+{% block body %}
+<main class="about">
+    <section id="company-info">
+        <h1>My Awesome Cart</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, reprehenderit magni voluptatum explicabo
+            ducimus ut. Id velit architecto animi. Ea vel accusantium, quos eaque inventore dolore aliquam maiores iure
+            omnis non suscipit fugit reiciendis alias labore corporis reprehenderit? Laborum molestias quod odio debitis
+            quam, quo minus soluta dicta nulla vero libero excepturi esse sed, velit ipsam aut tempore tenetur itaque
+            delectus voluptate voluptatem obcaecati numquam assumenda. Unde dolorum omnis est maiores iure a aut! Libero
+            corporis, sequi soluta ratione quidem laborum non! Exercitationem placeat assumenda voluptatem quisquam,
+            praesentium dolore illum earum! Consequatur, nisi cupiditate! Neque quo hic inventore labore perferendis
+            unde doloremque veniam consequatur cum repellat. Repellendus impedit dolore expedita totam quia eius quas
+            neque iure. Aperiam, minus. Nostrum praesentium ipsam, iure similique reiciendis qui illum tempora itaque
+            neque, quos enim? Unde ad rem quae odio iusto et voluptate, amet accusamus? Accusamus sit fugit molestias
+            nobis corrupti distinctio sequi numquam? Corrupti inventore molestias aliquam tempore? Accusamus recusandae
+            nesciunt ut, enim esse accusantium sequi quia vel amet suscipit? Fuga cum optio error, velit neque incidunt
+            asperiores, vero consectetur beatae quas dolor debitis reiciendis itaque iure quod explicabo voluptate,
+            praesentium excepturi? Delectus quia voluptates reiciendis, optio laboriosam architecto sequi! Commodi
+            asperiores nostrum maxime,
+        </p>
+        <!-- Add more content as needed -->
+    </section>
+    <section id="team">
+        <h2>Meet Our Team</h2>
+        <p>Introduce your team members...</p>
+        <!-- Add more content as needed -->
+    </section>
+    <!-- Add more sections as needed -->
+</main>
+<footer>
+    <!-- Add footer content if needed -->
+</footer>
+{% endblock %}
+{% block js %} {% endblock %}

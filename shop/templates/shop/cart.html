@@ -1,0 +1,18 @@
+{% extends 'shop/basic.html' %}    
+{% block css %} {% endblock %}
+{% block body %} 
+<h1>This is our Cart</h1>
+
+
+<div class="container">
+  {% for product,range in allprods%}
+      <li>
+        {{product}}
+      </li>
+  {%endfor%}    
+
+</div>
+
+
+{% endblock %}
+{% block js %} {% endblock %}

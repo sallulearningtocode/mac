@@ -1,0 +1,119 @@
+{%extends 'blog/basic.html'%}
+{%block css%}
+aside{
+background-color: #b8c2cc; 
+margin-bottom:200rem;
+}
+.iconcontainer{
+    display:flex;
+    flex-direction:row;
+}
+.icon{
+    padding-right:20px
+}
+{%endblock%}
+{%block body%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 blog-main">
+            <h3 class="pb-4 mb-4 font-italic ">
+                {{post.title}}
+            </h3>
+            <div class="fb-like" data-href="http://127.0.0.1:8000/blog/blogpost/{{post.post_id}}" data-width="" data-layout=""
+                data-action="like" data-size="" data-share="true"></div>
+
+            <div class="blog-post">
+                <h2 class="blog-post-title">{{post.head0}}</h2>
+                <p class="blog-post-meta">{{post.pub_date}} by <a href="#">Salman Khan</a></p>
+                <p>{{post.chead0}}</p>
+            </div><!-- /.blog-post -->
+            <div class="blog-post">
+                <h2 class="blog-post-title">{{post.head1}}</h2>
+                <p>{{post.chead1}}</p>
+            </div>
+            <div class="blog-post">
+                <h2 class="blog-post-title">{{post.head2}}</h2>
+                <p>{{post.chead2}}</p>
+            </div>
+            <div class="fb-comments" data-href="http://127.0.0.1:8000/blog/blogpost/{{post.post_id}}" data-width=""
+                data-numposts="5">
+            </div>
+            <!-- /.blog-post -->
+        </div><!-- /.blog-main -->
+
+        <aside class="aside col-md-4 mt-5 blog-sidebar">
+            <div class="p-4 mb-3 bg-light rounded">
+                <h4 class="font-italic">About</h4>
+                <p class="mb-0">My Awesome Cart is India's Fastest Growing E-Commerce Company. It was founded by Khan
+                    Brothers in the year 2020. In just a short span of 4 years this company managed to get 400 miilion
+                    dollars Investment and a huge 100 Crores of Market Cap.</p>
+            </div>
+
+            <div class="p-4">
+                <h4 class="font-italic">Contact Us</h4>
+                <div class="iconcontainer ">
+                    <div class="icon fb">
+                        <a href="https://www.facebook.com/profile.php?id=100006625389908" target="_blank"><img src="data:image/svg+xml;base64,
+                            PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAw
+                            IDI0IDI0Ij48cGF0aCBkPSJNMTIgMmM1LjUxNCAwIDEwIDQuNDg2IDEwIDEwcy00LjQ4NiAxMC0xMCAxMC0xMC00LjQ4Ni0xMC0xM
+                           CA0LjQ4Ni0xMCAxMC0xMHptMC0yYy02LjYyNyAwLTEyIDUuMzczLTEyIDEyczUuMzczIDEyIDEyIDEyIDEyLTUuMzczIDEyLTEyLT
+                           UuMzczLTEyLTEyLTEyem0tMiAxMGgtMnYyaDJ2Nmgzdi02aDEuODJsLjE4LTJoLTJ2LS44MzNjMC0uNDc4LjA5Ni0uNjY3LjU1OC0
+                           uNjY3aDEuNDQydi0yLjVoLTIuNDA0Yy0xLjc5OCAwLTIuNTk2Ljc5Mi0yLjU5NiAyLjMwOHYxLjY5MnoiLz48L3N2Zz4="></a>
+                    </div>
+                    <div class="icon insta">
+                        <a href="https://www.instagram.com/salmankhansrklover/" target="_blank">
+                            <img
+                                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMT
+                            IgMmM1LjUxNCAwIDEwIDQuNDg2IDEwIDEwcy00LjQ4NiAxMC0xMCAxMC0xMC00LjQ4Ni0xMC0xMCA0LjQ4Ni0xMCAxMC0xMHptMC0yYy02LjYyNyAwLTEyIDUuMzczLTEyIDEyczUuMzczIDEyIDEyIDEyIDE
+                            yLTUuMzczIDEyLTEyLTUuMzczLTEyLTEyLTEyem0wIDcuMDgyYzEuNjAyIDAgMS43OTIuMDA2IDIuNDI1LjAzNSAxLjYyNy4wNzQgMi4zODUuODQ1IDIuNDYgMi40NTkuMDI4LjYzMy4wMzQuODIyLjAzNCAy
+                            LjQyNHMtLjAwNiAxLjc5Mi0uMDM0IDIuNDI0Yy0uMDc1IDEuNjEzLS44MzIgMi4zODYtMi40NiAyLjQ2LS42MzMuMDI4LS44MjIuMDM1LTIuNDI1LjAzNS0xLjYwMiAwLTEuNzkyLS4wMDYtMi40MjQtLjAzN
+                            S0xLjYzLS4wNzUtMi4zODUtLjg0OS0yLjQ2LTIuNDYtLjAyOC0uNjMyLS4wMzUtLjgyMi0uMDM1LTIuNDI0cy4wMDctMS43OTIuMDM1LTIuNDI0Yy4wNzQtMS42MTUuODMyLTIuMzg2IDIuNDYtMi40Ni42Mz
+                            ItLjAyOS44MjItLjAzNCAyLjQyNC0uMDM0em0wLTEuMDgyYy0xLjYzIDAtMS44MzMuMDA3LTIuNDc0LjAzNy0yLjE4LjEtMy4zOSAxLjMwOS0zLjQ5IDMuNDg5LS4wMjkuNjQxLS4wMzYuODQ1LS4wMzYgMi4
+                            0NzQgMCAxLjYzLjAwNyAxLjgzNC4wMzYgMi40NzQuMSAyLjE3OSAxLjMxIDMuMzkgMy40OSAzLjQ5LjY0MS4wMjkuODQ0LjAzNiAyLjQ3NC4wMzYgMS42MyAwIDEuODM0LS4wMDcgMi40NzUtLjAzNiAyLjE3
+                            Ni0uMSAzLjM5MS0xLjMwOSAzLjQ4OS0zLjQ5LjAyOS0uNjQuMDM2LS44NDQuMDM2LTIuNDc0IDAtMS42MjktLjAwNy0xLjgzMy0uMDM2LTIuNDc0LS4wOTgtMi4xNzctMS4zMDktMy4zOS0zLjQ4OS0zLjQ4O
+                            S0uNjQxLS4wMy0uODQ1LS4wMzctMi40NzUtLjAzN3ptMCAyLjkxOWMtMS43MDEgMC0zLjA4MSAxLjM3OS0zLjA4MSAzLjA4MXMxLjM4IDMuMDgxIDMuMDgxIDMuMDgxIDMuMDgxLTEuMzc5IDMuMDgxLTMuMD
+                            gxYzAtMS43MDEtMS4zOC0zLjA4MS0zLjA4MS0zLjA4MXptMCA1LjA4MWMtMS4xMDUgMC0yLS44OTUtMi0yIDAtMS4xMDQuODk1LTIgMi0yIDEuMTA0IDAgMi4wMDEuODk1IDIuMDAxIDJzLS44OTcgMi0yLjA
+                            wMSAyem0zLjIwMi01LjkyMmMtLjM5NyAwLS43Mi4zMjItLjcyLjcyIDAgLjM5Ny4zMjIuNzIuNzIuNzIuMzk4IDAgLjcyMS0uMzIyLjcyMS0uNzIgMC0uMzk4LS4zMjItLjcyLS43MjEtLjcyeiIvPjwvc3ZnPg==">
+                        </a>
+                    </div>
+                    <div class="icon whatsapp">
+                        <a href="https://wa.me/19599872936
+                        " target="_blank">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMT
+                            IgMmM1LjUxNCAwIDEwIDQuNDg2IDEwIDEwcy00LjQ4NiAxMC0xMCAxMC0xMC00LjQ4Ni0xMC0xMCA0LjQ4Ni0xMCAxMC0xMHptMC0yYy02LjYyNyAwLTEyIDUuMzczLTEyIDEyczUuMzczIDEyIDEyIDEyIDE
+                            yLTUuMzczIDEyLTEyLTUuMzczLTEyLTEyLTEyem0tNS45NzEgMThsLjg0NC0zLjA4MWMtLjUyLS45MDItLjc5NC0xLjkyNS0uNzk0LTIuOTczLjAwMS0zLjI3OSAyLjY2OC01Ljk0NiA1Ljk0Ni01Ljk0NiAx
+                            LjU5MS4wMDEgMy4wODQuNjIgNC4yMDYgMS43NDQgMS4xMjMgMS4xMjQgMS43NDEgMi42MTggMS43NCA0LjIwNy0uMDAxIDMuMjc5LTIuNjY5IDUuOTQ2LTUuOTQ2IDUuOTQ2LS45OTUgMC0xLjk3Ni0uMjUtM
+                            i44NDQtLjcyNGwtMy4xNTIuODI3em0zLjI5OC0xLjkwM2MuODM4LjQ5NyAxLjYzOC43OTYgMi42OTYuNzk2IDIuNzI0IDAgNC45NDMtMi4yMTcgNC45NDQtNC45NDIuMDAxLTIuNzMxLTIuMjA4LTQuOTQ1LT
+                            QuOTQtNC45NDYtMi43MjYgMC00Ljk0MyAyLjIxNy00Ljk0NCA0Ljk0MiAwIDEuMTEyLjMyNiAxLjk0Ni44NzMgMi44MTdsLS40OTkgMS44MjQgMS44Ny0uNDkxem01LjY5NC0yLjczMmMtLjAzNy0uMDYyLS4
+                            xMzYtLjA5OS0uMjg1LS4xNzQtLjE0OS0uMDc0LS44NzktLjQzNC0xLjAxNS0uNDgzLS4xMzYtLjA1LS4yMzUtLjA3NC0uMzM0LjA3NC0uMDk5LjE0OS0uMzg0LjQ4My0uNDcuNTgzLS4wODcuMDk5LS4xNzMu
+                            MTEyLS4zMjIuMDM3LS4xNDktLjA3NC0uNjI3LS4yMzEtMS4xOTUtLjczNy0uNDQyLS4zOTQtLjc0LS44ODEtLjgyNy0xLjAyOS0uMDg3LS4xNDktLjAwOS0uMjI5LjA2NS0uMzAzbC4yMjMtLjI2LjE0OS0uM
+                            jQ4Yy4wNS0uMDk5LjAyNS0uMTg2LS4wMTItLjI2bC0uNDU4LTEuMTAzYy0uMTIxLS4yOS0uMjQzLS4yNS0uMzM0LS4yNTVsLS4yODYtLjAwN2MtLjA5OSAwLS4yNi4wMzctLjM5Ni4xODZzLS41Mi41MDgtLj
+                            UyIDEuMjRjMCAuNzMxLjUzMiAxLjQzOC42MDcgMS41MzcuMDc0LjA5OSAxLjA0OCAxLjYgMi41MzggMi4yNDMuMzU0LjE1My42MzEuMjQ1Ljg0Ny4zMTMuMzU2LjExMy42OC4wOTcuOTM2LjA1OS4yODUtLjA
+                            0My44NzktLjM1OSAxLjAwMy0uNzA2LjEyMy0uMzQ4LjEyMy0uNjQ1LjA4Ni0uNzA3eiIvPjwvc3ZnPg==">
+                        </a>
+                    </div>
+                    <div class="icon telegram"> 
+                        <a href="http://www.telegram.com" target="_blank"> <img
+                                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLj
+                                EvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj48c3ZnIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly9
+                                3d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM6c2VyaWY9Imh0dHA6Ly93d3cuc2VyaWYuY29t
+                                LyIgc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxLjQxNDIxOyI+PHBhdGggaWQ9InRlbGVncmFtLTUiI
+                                GQ9Ik0xMiwwYy02LjYyNywwIC0xMiw1LjM3MyAtMTIsMTJjMCw2LjYyNyA1LjM3MywxMiAxMiwxMmM2LjYyNywwIDEyLC01LjM3MyAxMiwtMTJjMCwtNi42MjcgLTUuMzczLC0xMiAtMTIsLTEyWm0wLDJjNS
+                                41MTQsMCAxMCw0LjQ4NiAxMCwxMGMwLDUuNTE0IC00LjQ4NiwxMCAtMTAsMTBjLTUuNTE0LDAgLTEwLC00LjQ4NiAtMTAsLTEwYzAsLTUuNTE0IDQuNDg2LC0xMCAxMCwtMTBabTIuNjkyLDE0Ljg4OWMwLjE
+                                2MSwwLjExNSAwLjM2OCwwLjE0MyAwLjU1MywwLjA3M2MwLjE4NSwtMC4wNyAwLjMyMiwtMC4yMjggMC4zNjIsLTAuNDJjMC40MzUsLTIuMDQyIDEuNDg5LC03LjIxMSAxLjg4NCwtOS4wNjhjMC4wMywtMC4x
+                                NCAtMC4wMTksLTAuMjg1IC0wLjEyOSwtMC4zNzljLTAuMTEsLTAuMDkzIC0wLjI2MywtMC4xMiAtMC4zOTksLTAuMDdjLTIuMDk2LDAuNzc2IC04LjU1MywzLjE5OCAtMTEuMTkyLDQuMTc1Yy0wLjE2OCwwL
+                                jA2MiAtMC4yNzcsMC4yMjMgLTAuMjcxLDAuNGMwLjAwNiwwLjE3NyAwLjEyNSwwLjMzIDAuMjk2LDAuMzgxYzEuMTg0LDAuMzU0IDIuNzM4LDAuODQ3IDIuNzM4LDAuODQ3YzAsMCAwLjcyNSwyLjE5MyAxLj
+                                EwNCwzLjMwOGMwLjA0NywwLjEzOSAwLjE1NywwLjI1IDAuMzAxLDAuMjg3YzAuMTQ1LDAuMDM4IDAuMjk4LC0wLjAwMSAwLjQwNiwtMC4xMDNjMC42MDgsLTAuNTc0IDEuNTQ4LC0xLjQ2MSAxLjU0OCwtMS4
+                                0NjFjMCwwIDEuNzg2LDEuMzA5IDIuNzk5LDIuMDNabS01LjUwNSwtNC4zMzhsMC44NCwyLjc2OWwwLjE4NiwtMS43NTRjMCwwIDMuMjQzLC0yLjkyNSA1LjA5MiwtNC41OTNjMC4wNTUsLTAuMDQ4IDAuMDYy
+                                LC0wLjEzIDAuMDE3LC0wLjE4OGMtMC4wNDUsLTAuMDU3IC0wLjEyNiwtMC4wNzEgLTAuMTg4LC0wLjAzMmMtMi4xNDMsMS4zNjggLTUuOTQ3LDMuNzk4IC01Ljk0NywzLjc5OFoiLz48L3N2Zz4=">
+                        </a>
+                    </div>
+            </div>
+        </aside><!-- /.blog-sidebar -->
+
+    </div>
+
+</div>
+
+{% endblock %}
